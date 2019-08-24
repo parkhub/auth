@@ -1,0 +1,44 @@
+###########################################################################
+#######                   FOR TESTING PURPOSES ONLY                 #######
+###########################################################################
+
+version: '2'
+
+services:
+
+  keto-migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    links:
+      - postgresd:postgresd
+    environment:
+      - LOG_LEVEL=debug
+    command:
+      migrate sql postgres://dbuser:secret@postgresd:5432/accesscontroldb?sslmode=disable
+    restart: on-failure
+
+  keto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    links:
+      - postgresd:postgresd
+    ports:
+      - "4466:4466"
+    depends_on:
+      - keto-migrate
+    command:
+      serve
+    environment:
+      - LOG_LEVEL=debug
+      - PORT=4466
+      - DATABASE_URL=postgres://dbuser:secret@postgresd:5432/accesscontroldb?sslmode=disable
+    restart: on-failure
+
+  postgresd:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=accesscontroldb

@@ -1,0 +1,80 @@
+# This is an example goreleaser.yaml file with some sane defaults.
+# Make sure to check the documentation at http://goreleaser.com
+project_name: hydra
+
+env:
+  - GO111MODULE=on
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+  -
+    flags:
+      - -a
+    ldflags:
+      - -s -w -X github.com/ory/hydra/cmd.Version={{.Env.RELEASE_NAME}} -X github.com/ory/hydra/cmd.Commit={{.FullCommit}} -X github.com/ory/hydra/cmd.Date={{.Date}}
+    binary: hydra
+    env:
+      - CGO_ENABLED=0
+    goarch:
+      - amd64
+      - 386
+      - arm
+      - arm64
+    goarm:
+      - 5
+      - 6
+      - 7
+    goos:
+      - freebsd
+      - linux
+      - windows
+      - darwin
+
+archives:
+  -
+    replacements:
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+      386: 32-bit
+      amd64: 64-bit
+    format_overrides:
+      - goos: windows
+        format: zip
+
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+brew:
+  github:
+    owner: ory
+    name: homebrew-hydra
+  homepage:  https://www.ory.sh
+  commit_author:
+    name: ory
+    email: hi@ory.sh
+
+scoop:
+  bucket:
+    owner: ory
+    name: scoop-hydra
+  homepage:  https://www.ory.sh
+  commit_author:
+    name: ory
+    email: hi@ory.sh
+
+dockers:
+  - image_templates:
+      - "oryd/hydra:v{{ .Major }}"
+      - "oryd/hydra:v{{ .Major }}.{{ .Minor }}"
+      - "oryd/hydra:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}"
+      - "oryd/hydra:{{ .Env.DOCKER_SHORT_TAG }}"
+      - "oryd/hydra:latest"
+
+release:
+  prerelease: auto
+  name_template: "{{.Env.RELEASE_NAME}}"

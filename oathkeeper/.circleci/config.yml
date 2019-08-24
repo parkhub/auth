@@ -1,0 +1,208 @@
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
+version: 2
+jobs:
+  format:
+    docker:
+      - image: circleci/golang:1.10
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - run: curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+      - run: go get -u golang.org/x/tools/cmd/goimports
+      - run: dep ensure -vendor-only
+      - run: ./scripts/test-format.sh
+
+  swagger:
+    docker:
+      - image: circleci/golang:1.10
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - run: curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+      - run: go get -u github.com/go-swagger/go-swagger/cmd/swagger golang.org/x/tools/cmd/goimports
+      - run: dep ensure -vendor-only
+      - run: ./scripts/run-genswag.sh
+
+  test:
+    docker:
+      - image: circleci/golang:1.10
+        environment:
+        - TEST_DATABASE_POSTGRESQL=postgres://test:test@localhost:5432/oathkeeper?sslmode=disable
+        - TEST_DATABASE_MYSQL=root:test@(localhost:3306)/mysql?parseTime=true
+        - TEST_HYDRA_ADMIN_URL=http://localhost:4445
+      - image: oryd/hydra:v1.0.0-beta.8
+        environment:
+        - DATABASE_URL=memory
+        command: "serve all --dangerous-force-http"
+      - image: mysql:5.7
+        environment:
+        - MYSQL_ROOT_PASSWORD=test
+      - image: postgres:9.5
+        environment:
+        - POSTGRES_USER=test
+        - POSTGRES_PASSWORD=test
+        - POSTGRES_DB=oathkeeper
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - run: go get -u github.com/go-swagger/go-swagger/cmd/swagger github.com/bradfitz/goimports github.com/mattn/goveralls golang.org/x/tools/cmd/cover github.com/ory/go-acc
+      - run: curl -L -s https://github.com/golang/dep/releases/download/v0.4.1/dep-linux-amd64 -o /go/bin/dep && chmod +x /go/bin/dep
+
+      # Installation
+      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+      - run: dep ensure -vendor-only
+      - run: go install github.com/ory/oathkeeper
+
+      # Tests
+      - run: go test -race -short $(go list ./... | grep -v cmd)
+      - run: go-acc -o coverage.txt ./...
+
+      # Submit coverage details
+      - run: test -z "$CIRCLE_PR_NUMBER" && goveralls -service=circle-ci -coverprofile=coverage.txt -repotoken=$COVERALLS_REPO_TOKEN || echo "forks are not allowed to push to coveralls"
+
+  build-docker:
+    docker:
+      - image: library/docker:17.10
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 17.10.0-ce
+      - run: docker build -f Dockerfile -t oathkeeper-test .
+      - run: docker run oathkeeper-test version
+
+  release-docker:
+    docker:
+      - image: circleci/golang:1.10
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 17.10.0-ce
+      - run: docker build --build-arg git_tag=$(git describe --tags) --build-arg git_commit=$(git rev-parse HEAD) -f Dockerfile -t oryd/oathkeeper:$CIRCLE_TAG .
+      - run: docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+      - run: docker tag oryd/oathkeeper:$CIRCLE_TAG oryd/oathkeeper:latest
+      - run: docker push oryd/oathkeeper:$CIRCLE_TAG
+      - run: docker push oryd/oathkeeper:latest
+
+  release-docs:
+    docker:
+      - image: alpine/git:1.0.4
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - run: git config --global user.email "hi@ory.am"
+      - run: git config --global user.name "ORY Continuous Integration"
+      - run: "git clone https://arekkas:$DOCS_TOKEN_PUSH@github.com/ory/docs.git ../docs"
+      - run: "cp ./docs/api.swagger.json ../docs/apis/oathkeeper.json"
+      - run: "(cd ../docs && git add -A && git commit -a -m \"Updates ORY Oathkeeper Swagger definitions\" && git push origin) || exit 0"
+
+  release-changelog:
+    docker:
+      - image: circleci/ruby:2.4-node
+    steps:
+      - checkout
+      - run: gem install github_changelog_generator
+      - run: sudo npm i -g doctoc
+      - run: github_changelog_generator -u ory -p oathkeeper -o CHANGELOG.md --token $GITHUB_TOKEN
+      - run: doctoc CHANGELOG.md
+      - run: doctoc README.md
+      - run: git config --global user.email "circleci@ory.am"
+      - run: git config --global user.name "ORY Continuous Integration"
+      - run: git add CHANGELOG.md
+      - run: git add README.md
+      - run: |
+          git commit -a -m "docs: Incorporates changes from version $(git describe --tags)" || true
+      - run: git remote rm origin
+      - run: git remote add origin https://arekkas:$GITHUB_TOKEN@github.com/ory/oathkeeper.git
+      - run: git push origin HEAD:master || true
+
+  release-binaries:
+    docker:
+      - image: circleci/golang:1.10
+    working_directory: /go/src/github.com/ory/oathkeeper
+    steps:
+      - checkout
+      - run: curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+      - run: go get -u github.com/mitchellh/gox github.com/tcnksm/ghr
+      - run: dep ensure -vendor-only
+      - run: |
+          gox -parallel=2 -ldflags "-X github.com/ory/oathkeeper/cmd.Version=`git describe --tags` -X github.com/ory/oathkeeper/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/ory/oathkeeper/cmd.GitHash=`git rev-parse HEAD`" -output "dist/{{.Dir}}-{{.OS}}-{{.Arch}}";
+      - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` dist/
+
+  release-npm:
+    docker:
+      - image: circleci/node:8.9.3
+    working_directory: ~/hydra
+    steps:
+      - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run: |
+          npm version -f --no-git-tag-version $CIRCLE_TAG
+      - run: npm view ory-hydra-sdk
+      - run: npm whoami
+      - run: npm publish
+
+workflows:
+  version: 2
+  "test, build, and relase":
+    jobs:
+      - format:
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          filters:
+            tags:
+              only: /.*/
+      - release-docs:
+          filters:
+            branches:
+              only: master
+      - swagger:
+          filters:
+            tags:
+              only: /.*/
+      - build-docker:
+          requires:
+            - test
+            - swagger
+            - format
+          filters:
+            tags:
+              only: /.*/
+      - release-binaries:
+          requires:
+            - build-docker
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - release-docker:
+          requires:
+            - build-docker
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - release-npm:
+          requires:
+            - build-docker
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
+      - release-changelog:
+          requires:
+            - release-docker
+            - release-binaries
+            - release-npm
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
