@@ -36,7 +36,7 @@ import (
 
 	httptransport "github.com/go-openapi/runtime/client"
 
-	hydra "github.com/ory/hydra/sdk/go/hydra/client"
+	hydra "github.com/justpark/auth/hydra/sdk/go/hydra/client"
 	"github.com/ory/x/cmdx"
 	"github.com/ory/x/flagx"
 )

@@ -31,9 +31,9 @@ import (
 	"github.com/stretchr/testify/require"
 	jose "gopkg.in/square/go-jose.v2"
 
-	. "github.com/ory/hydra/client"
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
+	. "github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
 )
 
 func TestValidate(t *testing.T) {

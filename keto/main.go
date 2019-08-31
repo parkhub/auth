@@ -18,7 +18,7 @@ package main
 import (
 	"os"
 
-	"github.com/ory/keto/cmd"
+	"github.com/justpark/auth/keto/cmd"
 	"github.com/pkg/profile"
 )
 

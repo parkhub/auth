@@ -24,7 +24,7 @@ package server
 import (
 	"net/url"
 
-	"github.com/ory/keto/role"
+	"github.com/justpark/auth/keto/role"
 	"github.com/ory/ladon/manager/sql"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -34,7 +34,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
-	"github.com/ory/keto/legacy"
+	"github.com/justpark/auth/keto/legacy"
 	"github.com/rubenv/sql-migrate"
 )
 

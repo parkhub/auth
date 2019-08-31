@@ -6,7 +6,7 @@
     <a href="http://eepurl.com/di390P">Newsletter</a><br/><br/>
     <a href="https://www.ory.sh/docs/guides/master/oathkeeper/">Guide</a> |
     <a href="https://www.ory.sh/docs/api/oathkeeper?version=master">API Docs</a> |
-    <a href="https://godoc.org/github.com/ory/oathkeeper">Code Docs</a><br/><br/>
+    <a href="https://godoc.org/github.com/justpark/auth/oathkeeper">Code Docs</a><br/><br/>
     <a href="https://opencollective.com/ory">Support this project!</a>
 </h4>
 
@@ -28,7 +28,7 @@ This service is stable, but under active development and may introduce breaking 
 
 [![CircleCI](https://circleci.com/gh/ory/oathkeeper.svg?style=shield&circle-token=eb458bf636326d41674141b6bbfa475a39c9db1e)](https://circleci.com/gh/ory/oathkeeper)
 [![Coverage Status](https://coveralls.io/repos/github/ory/oathkeeper/badge.svg?branch=master)](https://coveralls.io/github/ory/oathkeeper?branch=master)
-![Go Report Card](https://goreportcard.com/badge/github.com/ory/oathkeeper)
+![Go Report Card](https://goreportcard.com/badge/github.com/justpark/auth/oathkeeper)
 
 ---
 
@@ -65,7 +65,7 @@ There are various ways of installing ORY Oathkeeper on your system.
 
 ### Download binaries
 
-The client and server **binaries are downloadable at [releases](https://github.com/ory/oathkeeper/releases)**.
+The client and server **binaries are downloadable at [releases](https://github.com/justpark/auth/oathkeeper/releases)**.
 There is currently no installer available. You have to add the ORY Oathkeeper binary to the PATH environment variable yourself or put
 the binary in a location that is already in your path (`/usr/bin`, ...).
 If you do not understand what that all of this means, ask in our [chat channel](https://www.ory.sh/chat). We are happy to help.
@@ -93,14 +93,14 @@ The following commands will check out the latest release tag of ORY Oathkeeper a
 works as expected. Please note that this will only work with a linux shell like bash or sh.
 
 ```
-go get -d -u github.com/ory/oathkeeper
-cd $(go env GOPATH)/src/github.com/ory/oathkeeper
+go get -d -u github.com/justpark/auth/oathkeeper
+cd $(go env GOPATH)/src/github.com/justpark/auth/oathkeeper
 OATHKEEPER_LATEST=$(git describe --abbrev=0 --tags)
 git checkout $OATHKEEPER_LATEST
 dep ensure -vendor-only
 go install \
-    -ldflags "-X github.com/ory/oathkeeper/cmd.Version=$OATHKEEPER_LATEST -X github.com/ory/oathkeeper/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/ory/oathkeeper/cmd.GitHash=`git rev-parse HEAD`" \
-    github.com/ory/oathkeeper
+    -ldflags "-X github.com/justpark/auth/oathkeeper/cmd.Version=$OATHKEEPER_LATEST -X github.com/justpark/auth/oathkeeper/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/justpark/auth/oathkeeper/cmd.GitHash=`git rev-parse HEAD`" \
+    github.com/justpark/auth/oathkeeper
 git checkout master
 oathkeeper help
 ```
@@ -118,13 +118,13 @@ ORY Oathkeeper, and ORY Keto.
 
 ### ORY Hydra: OAuth2 & OpenID Connect Server
 
-[ORY Hydra](https://github.com/ory/hydra) ORY Hydra is a hardened OAuth2 and OpenID Connect server optimized
+[ORY Hydra](https://github.com/justpark/auth/hydra) ORY Hydra is a hardened OAuth2 and OpenID Connect server optimized
 for low-latency, high throughput, and low resource consumption. ORY Hydra is not an identity provider
 (user sign up, user log in, password reset flow), but connects to your existing identity provider through a consent app.
 
 ### ORY Keto: Access Control Policies as a Server
 
-[ORY Keto](https://github.com/ory/keto) is a policy decision point. It uses a set of access control policies, similar
+[ORY Keto](https://github.com/justpark/auth/keto) is a policy decision point. It uses a set of access control policies, similar
 to AWS IAM Policies, in order to determine whether a subject (user, application, service, car, ...) is authorized to
 perform a certain action on a resource.
 
@@ -169,8 +169,8 @@ Run `oathkeeper -h` or `oathkeeper help`.
 Developing with ORY Oathkeeper is as easy as:
 
 ```
-go get -d -u github.com/ory/oathkeeper
-cd $GOPATH/src/github.com/ory/oathkeeper
+go get -d -u github.com/justpark/auth/oathkeeper
+cd $GOPATH/src/github.com/justpark/auth/oathkeeper
 dep ensure
 go test ./...
 ```

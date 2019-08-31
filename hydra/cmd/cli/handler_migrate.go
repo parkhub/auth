@@ -30,8 +30,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/ory/hydra/driver"
-	"github.com/ory/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/driver"
+	"github.com/justpark/auth/hydra/driver/configuration"
 	"github.com/ory/x/cmdx"
 	"github.com/ory/x/flagx"
 	"github.com/ory/x/logrusx"

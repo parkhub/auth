@@ -27,14 +27,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 	migrate "github.com/rubenv/sql-migrate"
 
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/dbal"
 	"github.com/ory/x/sqlcon"
 )
@@ -152,7 +152,7 @@ func (m *SQLManager) RevokeSubjectLoginSession(ctx context.Context, user string)
 		return sqlcon.HandleError(err)
 	}
 
-	// This confuses people, see https://github.com/ory/hydra/issues/1168
+	// This confuses people, see https://github.com/justpark/auth/hydra/issues/1168
 	//
 	// count, _ := rows.RowsAffected()
 	// if count == 0 {

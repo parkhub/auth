@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: consumer-localhost
+  name: consumer-localhost
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: consumer-localhost
+    spec:
+      containers:
+      - env:
+        - name: BACKEND_INTROSPECT_URL
+          value: http://resource-server:4478/introspect
+        - name: BACKEND_OATHKEEPER_URL
+          value: http://oathkeeper-proxy:4455/oathkeeper
+        - name: BACKEND_WARDEN_SUBJECT_URL
+          value: http://resource-server:4478/keto/subject
+        - name: OAUTH2_AUTH_URL
+          value: http://:4444/oauth2/auth
+        - name: OAUTH2_CLIENT_ID
+          value: consumer-app
+        - name: OAUTH2_CLIENT_SECRET
+          value: consumer-secret
+        - name: OAUTH2_REDIRECT_URL
+          value: http://:4477/auth/callback
+        - name: OAUTH2_TOKEN_URL
+          value: http://hydra:4444/oauth2/token
+        - name: PORT
+          value: "4477"
+        image: consumer-localhost
+        name: consumer-localhost
+        ports:
+        - containerPort: 4477
+        resources: {}
+      restartPolicy: Always
+status: {}

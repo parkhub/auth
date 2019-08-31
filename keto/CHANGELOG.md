@@ -17,101 +17,101 @@
 
 # Change Log
 
-## [v1.0.0-beta.8](https://github.com/ory/keto/tree/v1.0.0-beta.8) (2018-08-02)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.7...v1.0.0-beta.8)
+## [v1.0.0-beta.8](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.8) (2018-08-02)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.7...v1.0.0-beta.8)
 
 **Closed issues:**
 
-- Build and upload binaries upon release [\#36](https://github.com/ory/keto/issues/36)
+- Build and upload binaries upon release [\#36](https://github.com/justpark/auth/keto/issues/36)
 
 **Merged pull requests:**
 
-- cmd: Fixes typo in help command in env var name [\#39](https://github.com/ory/keto/pull/39) ([RomanMinkin](https://github.com/RomanMinkin))
-- sdk: Add SDK generation to circle ci [\#38](https://github.com/ory/keto/pull/38) ([arekkas](https://github.com/arekkas))
-- health: Introduces health and version endpoints [\#37](https://github.com/ory/keto/pull/37) ([arekkas](https://github.com/arekkas))
+- cmd: Fixes typo in help command in env var name [\#39](https://github.com/justpark/auth/keto/pull/39) ([RomanMinkin](https://github.com/RomanMinkin))
+- sdk: Add SDK generation to circle ci [\#38](https://github.com/justpark/auth/keto/pull/38) ([arekkas](https://github.com/arekkas))
+- health: Introduces health and version endpoints [\#37](https://github.com/justpark/auth/keto/pull/37) ([arekkas](https://github.com/arekkas))
 
-## [v1.0.0-beta.7](https://github.com/ory/keto/tree/v1.0.0-beta.7) (2018-07-16)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.6...v1.0.0-beta.7)
+## [v1.0.0-beta.7](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.7) (2018-07-16)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.6...v1.0.0-beta.7)
 
 **Merged pull requests:**
 
-- dep: Update hydra to v1.0.0-beta.6 [\#35](https://github.com/ory/keto/pull/35) ([RomanMinkin](https://github.com/RomanMinkin))
+- dep: Update hydra to v1.0.0-beta.6 [\#35](https://github.com/justpark/auth/keto/pull/35) ([RomanMinkin](https://github.com/RomanMinkin))
 
-## [v1.0.0-beta.6](https://github.com/ory/keto/tree/v1.0.0-beta.6) (2018-07-07)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.5...v1.0.0-beta.6)
+## [v1.0.0-beta.6](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.6) (2018-07-07)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.5...v1.0.0-beta.6)
 
-## [v1.0.0-beta.5](https://github.com/ory/keto/tree/v1.0.0-beta.5) (2018-07-07)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.3...v1.0.0-beta.5)
+## [v1.0.0-beta.5](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.5) (2018-07-07)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.3...v1.0.0-beta.5)
 
 **Fixed bugs:**
 
-- roles without members does not shown in roles list [\#27](https://github.com/ory/keto/issues/27)
+- roles without members does not shown in roles list [\#27](https://github.com/justpark/auth/keto/issues/27)
 
 **Merged pull requests:**
 
-- Update README.md [\#34](https://github.com/ory/keto/pull/34) ([tacurran](https://github.com/tacurran))
-- cmd: Properly output telemetry information [\#33](https://github.com/ory/keto/pull/33) ([arekkas](https://github.com/arekkas))
-- docs: Adds link to examples repository [\#32](https://github.com/ory/keto/pull/32) ([arekkas](https://github.com/arekkas))
-- docs: Adds GitHub templates & code of conduct [\#31](https://github.com/ory/keto/pull/31) ([arekkas](https://github.com/arekkas))
-- ci: Prevent pushes from forks to coveralls [\#29](https://github.com/ory/keto/pull/29) ([arekkas](https://github.com/arekkas))
-- roles: List roles from keto\_role table [\#28](https://github.com/ory/keto/pull/28) ([sadysnaat](https://github.com/sadysnaat))
+- Update README.md [\#34](https://github.com/justpark/auth/keto/pull/34) ([tacurran](https://github.com/tacurran))
+- cmd: Properly output telemetry information [\#33](https://github.com/justpark/auth/keto/pull/33) ([arekkas](https://github.com/arekkas))
+- docs: Adds link to examples repository [\#32](https://github.com/justpark/auth/keto/pull/32) ([arekkas](https://github.com/arekkas))
+- docs: Adds GitHub templates & code of conduct [\#31](https://github.com/justpark/auth/keto/pull/31) ([arekkas](https://github.com/arekkas))
+- ci: Prevent pushes from forks to coveralls [\#29](https://github.com/justpark/auth/keto/pull/29) ([arekkas](https://github.com/arekkas))
+- roles: List roles from keto\_role table [\#28](https://github.com/justpark/auth/keto/pull/28) ([sadysnaat](https://github.com/sadysnaat))
 
-## [v1.0.0-beta.3](https://github.com/ory/keto/tree/v1.0.0-beta.3) (2018-06-13)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.4...v1.0.0-beta.3)
+## [v1.0.0-beta.3](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.3) (2018-06-13)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.4...v1.0.0-beta.3)
 
-## [v1.0.0-beta.4](https://github.com/ory/keto/tree/v1.0.0-beta.4) (2018-06-13)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.2...v1.0.0-beta.4)
+## [v1.0.0-beta.4](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.4) (2018-06-13)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.2...v1.0.0-beta.4)
 
 **Fixed bugs:**
 
-- Wrong oauth introspect url [\#25](https://github.com/ory/keto/issues/25)
-- Upgrade from \< 1.0.0-beta Hydra migration commands fail [\#23](https://github.com/ory/keto/issues/23)
+- Wrong oauth introspect url [\#25](https://github.com/justpark/auth/keto/issues/25)
+- Upgrade from \< 1.0.0-beta Hydra migration commands fail [\#23](https://github.com/justpark/auth/keto/issues/23)
 
 **Closed issues:**
 
-- Role setup not working [\#21](https://github.com/ory/keto/issues/21)
+- Role setup not working [\#21](https://github.com/justpark/auth/keto/issues/21)
 
 **Merged pull requests:**
 
-- cmd: Fixes typo in help command [\#26](https://github.com/ory/keto/pull/26) ([arekkas](https://github.com/arekkas))
-- cmd: Resolves an issue with the hydra migrate command [\#24](https://github.com/ory/keto/pull/24) ([arekkas](https://github.com/arekkas))
-- warden: Use roles in warden decision [\#22](https://github.com/ory/keto/pull/22) ([arekkas](https://github.com/arekkas))
-- cmd: Improves usage of metrics middleware [\#18](https://github.com/ory/keto/pull/18) ([arekkas](https://github.com/arekkas))
+- cmd: Fixes typo in help command [\#26](https://github.com/justpark/auth/keto/pull/26) ([arekkas](https://github.com/arekkas))
+- cmd: Resolves an issue with the hydra migrate command [\#24](https://github.com/justpark/auth/keto/pull/24) ([arekkas](https://github.com/arekkas))
+- warden: Use roles in warden decision [\#22](https://github.com/justpark/auth/keto/pull/22) ([arekkas](https://github.com/arekkas))
+- cmd: Improves usage of metrics middleware [\#18](https://github.com/justpark/auth/keto/pull/18) ([arekkas](https://github.com/arekkas))
 
-## [v1.0.0-beta.2](https://github.com/ory/keto/tree/v1.0.0-beta.2) (2018-05-29)
-[Full Changelog](https://github.com/ory/keto/compare/v1.0.0-beta.1...v1.0.0-beta.2)
+## [v1.0.0-beta.2](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.2) (2018-05-29)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v1.0.0-beta.1...v1.0.0-beta.2)
 
-## [v1.0.0-beta.1](https://github.com/ory/keto/tree/v1.0.0-beta.1) (2018-05-29)
-[Full Changelog](https://github.com/ory/keto/compare/v0.0.1...v1.0.0-beta.1)
+## [v1.0.0-beta.1](https://github.com/justpark/auth/keto/tree/v1.0.0-beta.1) (2018-05-29)
+[Full Changelog](https://github.com/justpark/auth/keto/compare/v0.0.1...v1.0.0-beta.1)
 
 **Closed issues:**
 
-- roles: add a PUT method to overwrite members [\#10](https://github.com/ory/keto/issues/10)
+- roles: add a PUT method to overwrite members [\#10](https://github.com/justpark/auth/keto/issues/10)
 
 **Merged pull requests:**
 
-- Minor changes and fixes [\#17](https://github.com/ory/keto/pull/17) ([arekkas](https://github.com/arekkas))
-- Resolves minor issues [\#16](https://github.com/ory/keto/pull/16) ([arekkas](https://github.com/arekkas))
-- transfer UpdateRoleMembers [\#14](https://github.com/ory/keto/pull/14) ([zepatrik](https://github.com/zepatrik))
-- ci: Resolves test timeout [\#13](https://github.com/ory/keto/pull/13) ([arekkas](https://github.com/arekkas))
+- Minor changes and fixes [\#17](https://github.com/justpark/auth/keto/pull/17) ([arekkas](https://github.com/arekkas))
+- Resolves minor issues [\#16](https://github.com/justpark/auth/keto/pull/16) ([arekkas](https://github.com/arekkas))
+- transfer UpdateRoleMembers [\#14](https://github.com/justpark/auth/keto/pull/14) ([zepatrik](https://github.com/zepatrik))
+- ci: Resolves test timeout [\#13](https://github.com/justpark/auth/keto/pull/13) ([arekkas](https://github.com/arekkas))
 
-## [v0.0.1](https://github.com/ory/keto/tree/v0.0.1) (2018-05-20)
+## [v0.0.1](https://github.com/justpark/auth/keto/tree/v0.0.1) (2018-05-20)
 **Implemented enhancements:**
 
-- Fix token type [\#12](https://github.com/ory/keto/pull/12) ([arekkas](https://github.com/arekkas))
+- Fix token type [\#12](https://github.com/justpark/auth/keto/pull/12) ([arekkas](https://github.com/arekkas))
 
 **Closed issues:**
 
-- The Warden API should not check for refresh tokens, only access tokens. [\#1](https://github.com/ory/keto/issues/1)
+- The Warden API should not check for refresh tokens, only access tokens. [\#1](https://github.com/justpark/auth/keto/issues/1)
 
 **Merged pull requests:**
 
-- auth: Renames subject to sub in response payloads [\#9](https://github.com/ory/keto/pull/9) ([arekkas](https://github.com/arekkas))
-- cmd: Retries SQL connection on migrate commands [\#8](https://github.com/ory/keto/pull/8) ([arekkas](https://github.com/arekkas))
-- Improve bc [\#7](https://github.com/ory/keto/pull/7) ([arekkas](https://github.com/arekkas))
-- docs: Updates readme and upgrades [\#6](https://github.com/ory/keto/pull/6) ([arekkas](https://github.com/arekkas))
-- Fix sdk [\#5](https://github.com/ory/keto/pull/5) ([arekkas](https://github.com/arekkas))
-- Resolves SDK and test issues [\#4](https://github.com/ory/keto/pull/4) ([arekkas](https://github.com/arekkas))
+- auth: Renames subject to sub in response payloads [\#9](https://github.com/justpark/auth/keto/pull/9) ([arekkas](https://github.com/arekkas))
+- cmd: Retries SQL connection on migrate commands [\#8](https://github.com/justpark/auth/keto/pull/8) ([arekkas](https://github.com/arekkas))
+- Improve bc [\#7](https://github.com/justpark/auth/keto/pull/7) ([arekkas](https://github.com/arekkas))
+- docs: Updates readme and upgrades [\#6](https://github.com/justpark/auth/keto/pull/6) ([arekkas](https://github.com/arekkas))
+- Fix sdk [\#5](https://github.com/justpark/auth/keto/pull/5) ([arekkas](https://github.com/arekkas))
+- Resolves SDK and test issues [\#4](https://github.com/justpark/auth/keto/pull/4) ([arekkas](https://github.com/arekkas))
 
 
 

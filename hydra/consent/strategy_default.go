@@ -40,8 +40,8 @@ import (
 	"github.com/ory/fosite"
 	"github.com/ory/fosite/handler/openid"
 	"github.com/ory/fosite/token/jwt"
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/mapx"
 	"github.com/ory/x/stringslice"
 	"github.com/ory/x/stringsx"
@@ -475,7 +475,7 @@ func (s *DefaultStrategy) requestConsent(w http.ResponseWriter, r *http.Request,
 		// The OpenID Connect Test Tool fails if this returns `consent_required` when `prompt=none` is used.
 		// According to the quote above, it should be ok to allow https to skip consent.
 		//
-		// This is tracked as issue: https://github.com/ory/hydra/issues/866
+		// This is tracked as issue: https://github.com/justpark/auth/hydra/issues/866
 		// This is also tracked as upstream issue: https://github.com/openid-certification/oidctest/issues/97
 		if !(ar.GetRedirectURI().Scheme == "https" || (fosite.IsLocalhost(ar.GetRedirectURI()) && ar.GetRedirectURI().Scheme == "http")) {
 			return s.forwardConsentRequest(w, r, ar, authenticationSession, nil)

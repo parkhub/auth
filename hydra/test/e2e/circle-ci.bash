@@ -12,7 +12,7 @@ export GO111MODULE=on
 if [[ ! -d "../../node_modules/" ]]; then
     (cd ../..; npm ci)
 fi
-go install github.com/ory/hydra
+go install github.com/justpark/auth/hydra
 go build -buildmode=plugin -o ./memtest.so ./plugin/memtest.go
 
 # Install oauth2-client

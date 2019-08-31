@@ -30,7 +30,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/ory/hydra/cmd/cli"
+	"github.com/justpark/auth/hydra/cmd/cli"
 )
 
 var cfgFile string

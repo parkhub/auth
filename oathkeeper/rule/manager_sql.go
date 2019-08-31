@@ -27,7 +27,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/ory/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/helper"
 	"github.com/pkg/errors"
 	"github.com/rubenv/sql-migrate"
 )

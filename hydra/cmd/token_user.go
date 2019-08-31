@@ -33,7 +33,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ory/hydra/cmd/cli"
+	"github.com/justpark/auth/hydra/cmd/cli"
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/spf13/cobra"

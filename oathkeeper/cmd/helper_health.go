@@ -23,7 +23,7 @@ package cmd
 import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/ory/herodot"
-	"github.com/ory/oathkeeper/health"
+	"github.com/justpark/auth/oathkeeper/health"
 )
 
 type pinger interface {

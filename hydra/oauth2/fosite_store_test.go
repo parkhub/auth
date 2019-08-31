@@ -30,12 +30,12 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/driver"
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
-	. "github.com/ory/hydra/oauth2"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/driver"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
+	. "github.com/justpark/auth/hydra/oauth2"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/sqlcon/dockertest"
 )
 

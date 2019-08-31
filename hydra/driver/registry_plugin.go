@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ory/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/driver/configuration"
 	"github.com/ory/x/dbal"
 )
 

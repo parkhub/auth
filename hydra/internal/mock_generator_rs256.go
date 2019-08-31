@@ -29,7 +29,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/square/go-jose.v2"
 
-	"github.com/ory/hydra/jwk"
+	"github.com/justpark/auth/hydra/jwk"
 )
 
 type veryInsecureRS256Generator struct{}

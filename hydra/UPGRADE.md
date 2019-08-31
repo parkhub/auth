@@ -181,11 +181,11 @@ The Go SDK is now being generated using `go-swagger`. The SDK generated using `s
 The old Go SDK is still available but moved to a new path. To use it, change:
 
 ```
-- import "github.com/ory/hydra/sdk/go/hydra"
-- import "github.com/ory/hydra/sdk/go/hydra/swagger"
+- import "github.com/justpark/auth/hydra/sdk/go/hydra"
+- import "github.com/justpark/auth/hydra/sdk/go/hydra/swagger"
 
-+ import hydra "github.com/ory/hydra-legacy-sdk"
-+ import "github.com/ory/hydra-legacy-sdk/swagger"
++ import hydra "github.com/justpark/auth/hydra-legacy-sdk"
++ import "github.com/justpark/auth/hydra-legacy-sdk/swagger"
 ```
 
 ### Accepting Login and Consent Requests
@@ -233,7 +233,7 @@ This patch introduces changes to the way configuration works in ORY Hydra. It al
 a variety of sources including environment variables and a configuration file. In the future, ORY Hydra might be configurable
 using etcd or consul. The changes allow ORY Hydra to reload configuration without restarting in the future.
 
-An overview of configuration settings can be found [here](https://github.com/ory/hydra/blob/master/docs/config.yaml).
+An overview of configuration settings can be found [here](https://github.com/justpark/auth/hydra/blob/master/docs/config.yaml).
 
 All changes are backwards compatible except for the way key rotation works (see next section) and the way DBAL plugins
 are loaded (see section after next).
@@ -697,20 +697,20 @@ To distinguish tokens, use the `token_type` in the introspection response. It ca
 
 #### Access Control & Warden API
 
-Internal access control, access control policies, and the Warden API have moved to a separate project called [ORY Keto](https://github.com/ory/keto).
-You will be able to run a combination of ORY Hydra, [ORY Oathkeeper](https://github.com/ory/oathkeeper), and [ORY Keto](https://github.com/ory/keto) which will be backwards compatible with
+Internal access control, access control policies, and the Warden API have moved to a separate project called [ORY Keto](https://github.com/justpark/auth/keto).
+You will be able to run a combination of ORY Hydra, [ORY Oathkeeper](https://github.com/justpark/auth/oathkeeper), and [ORY Keto](https://github.com/justpark/auth/keto) which will be backwards compatible with
 ORY Hydra before the 1.0.0 release. This section explains how to upgrade and links to an example explaining the set up
 of the three services.
 
 **This means that ORY Hydra has no longer any type of internal access control. Endpoints such as `POST /clients` no longer
 require access tokens to be accessed. You must secure these endpoints yourself. For more information, [click here](https://www.ory.sh/docs/hydra/production).**
 
-[ORY Keto](https://github.com/ory/keto) handles access control using access control policies. The project currently supports the Warden API, Access Control Policy
+[ORY Keto](https://github.com/justpark/auth/keto) handles access control using access control policies. The project currently supports the Warden API, Access Control Policy
 management, and Roles (previously known as [Warden Groups](#warden-groups)). ORY Keto is independent from ORY Hydra
 as it does not rely on any proprietary APIs but instead uses open standards such as OAuth 2.0 Token Introspection
 and the OAuth 2.0 Client Credentials Grant to authenticate credentials. ORY Keto can be used as a standalone project,
 and might even be used with other OAuth 2.0 providers, opening up tons of possible use cases and scenarios. To learn
-more about the project, head over to [github.com/ory/keto](https://github.com/ory/keto).
+more about the project, head over to [github.com/justpark/auth/keto](https://github.com/justpark/auth/keto).
 
 Assuming that you have the 1.0.0 release binary of ORY Hydra and ORY Keto locally installed, you can migrate the existing
 policies and Warden Groups using the migrate commands. Please back up your database before doing this:
@@ -777,7 +777,7 @@ a coherent API.
   * Key `nbf` ("not before") has been added.
 
 We are aware that these changes are rather serious, especially if you rely on the Warden API in each of your endpoints.
-If you have ideas on how to improve upgrading or offer a backwards compatible API, please [open an issue](https://github.com/ory/keto/issues/new)
+If you have ideas on how to improve upgrading or offer a backwards compatible API, please [open an issue](https://github.com/justpark/auth/keto/issues/new)
 and let us know.
 
 All other endpoints have not experienced any response payload changes.
@@ -824,7 +824,7 @@ and `User Consent Provider`. If you implement both features (explained in the ne
 it the `User Login and Consent Provider`.
 
 A reference implementation of the new User Login and Consent Provider is available at
-[github.com/ory/hydra-login-consent-node](https://github.com/ory/hydra-login-consent-node).
+[github.com/justpark/auth/hydra-login-consent-node](https://github.com/justpark/auth/hydra-login-consent-node).
 
 The major difference between the old and new flow is, that authentication (user login) and scope authorization (user consent)
 are now two separate endpoints.
@@ -918,18 +918,18 @@ Please help improving this section by adding upgrade guides for the SDK you upgr
 The following methods have been moved.
 
 * The Access Control Policy SDK has moved to ORY Keto:
-  * `CreatePolicy(body swagger.Policy) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/ory/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/ory/hydra/sdk/go/hydra/swagger` now being included from `github.com/ory/keto/sdk/go/keto/swagger`.
-  * `DeletePolicy(id string) (*swagger.APIResponse, error)` is now available via `github.com/ory/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/ory/hydra/sdk/go/hydra/swagger` now being included from `github.com/ory/keto/sdk/go/keto/swagger`.
-  * `GetPolicy(id string) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/ory/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/ory/hydra/sdk/go/hydra/swagger` now being included from `github.com/ory/keto/sdk/go/keto/swagger`.
-  * `ListPolicies(offset int64, limit int64) ([]swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/ory/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/ory/hydra/sdk/go/hydra/swagger` now being included from `github.com/ory/keto/sdk/go/keto/swagger`.
-  * `UpdatePolicy(id string, body swagger.Policy) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/ory/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/ory/hydra/sdk/go/hydra/swagger` now being included from `github.com/ory/keto/sdk/go/keto/swagger`.
+  * `CreatePolicy(body swagger.Policy) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/justpark/auth/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/justpark/auth/hydra/sdk/go/hydra/swagger` now being included from `github.com/justpark/auth/keto/sdk/go/keto/swagger`.
+  * `DeletePolicy(id string) (*swagger.APIResponse, error)` is now available via `github.com/justpark/auth/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/justpark/auth/hydra/sdk/go/hydra/swagger` now being included from `github.com/justpark/auth/keto/sdk/go/keto/swagger`.
+  * `GetPolicy(id string) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/justpark/auth/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/justpark/auth/hydra/sdk/go/hydra/swagger` now being included from `github.com/justpark/auth/keto/sdk/go/keto/swagger`.
+  * `ListPolicies(offset int64, limit int64) ([]swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/justpark/auth/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/justpark/auth/hydra/sdk/go/hydra/swagger` now being included from `github.com/justpark/auth/keto/sdk/go/keto/swagger`.
+  * `UpdatePolicy(id string, body swagger.Policy) (*swagger.Policy, *swagger.APIResponse, error)` is now available via `github.com/justpark/auth/keto/sdk/go/keto`. The method signature has not changed, apart from types `github.com/justpark/auth/hydra/sdk/go/hydra/swagger` now being included from `github.com/justpark/auth/keto/sdk/go/keto/swagger`.
 * The Warden Group SDK has moved to Keto:
-  - `AddMembersToGroup(id string, body swagger.GroupMembers) (*swagger.APIResponse, error)` is now `AddMembersToRole(id string, body swagger.RoleMembers) (*swagger.APIResponse, error)` and is now available via `github.com/ory/keto/sdk/go/keto`.
-  - `CreateGroup(body swagger.Group) (*swagger.Group, *swagger.APIResponse, error)` is now `CreateRole(body swagger.Role) (*swagger.Role, *swagger.APIResponse, error` and is now available via `github.com/ory/keto/sdk/go/keto`.
-  - `DeleteGroup(id string) (*swagger.APIResponse, error)` is now `DeleteRole(id string) (*swagger.APIResponse, error)` and is now available via `github.com/ory/keto/sdk/go/keto`.
-  - `ListGroups(member string, limit, offset int64) ([]swagger.Group, *swagger.APIResponse, error)` is now `ListRoles(member string, limit int64, offset int64) ([]swagger.Role, *swagger.APIResponse, error)` and is now available via `github.com/ory/keto/sdk/go/keto`.
-  - `GetGroup(id string) (*swagger.Group, *swagger.APIResponse, error)` is now `GetRole(id string) (*swagger.Role, *swagger.APIResponse, error)` and is now available via `github.com/ory/keto/sdk/go/keto`.
-  - `RemoveMembersFromGroup(id string, body swagger.GroupMembers) (*swagger.APIResponse, error)` is now `RemoveMembersFromRole(id string, body swagger.RoleMembers) (*swagger.APIResponse, error)` and is now available via `github.com/ory/keto/sdk/go/keto`.
+  - `AddMembersToGroup(id string, body swagger.GroupMembers) (*swagger.APIResponse, error)` is now `AddMembersToRole(id string, body swagger.RoleMembers) (*swagger.APIResponse, error)` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
+  - `CreateGroup(body swagger.Group) (*swagger.Group, *swagger.APIResponse, error)` is now `CreateRole(body swagger.Role) (*swagger.Role, *swagger.APIResponse, error` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
+  - `DeleteGroup(id string) (*swagger.APIResponse, error)` is now `DeleteRole(id string) (*swagger.APIResponse, error)` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
+  - `ListGroups(member string, limit, offset int64) ([]swagger.Group, *swagger.APIResponse, error)` is now `ListRoles(member string, limit int64, offset int64) ([]swagger.Role, *swagger.APIResponse, error)` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
+  - `GetGroup(id string) (*swagger.Group, *swagger.APIResponse, error)` is now `GetRole(id string) (*swagger.Role, *swagger.APIResponse, error)` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
+  - `RemoveMembersFromGroup(id string, body swagger.GroupMembers) (*swagger.APIResponse, error)` is now `RemoveMembersFromRole(id string, body swagger.RoleMembers) (*swagger.APIResponse, error)` and is now available via `github.com/justpark/auth/keto/sdk/go/keto`.
 * The Warden API SDK has moved to Keto:
   - `DoesWardenAllowAccessRequest(body swagger.WardenAccessRequest) (*swagger.WardenAccessRequestResponse, *swagger.APIResponse, error)` is now `IsSubjectAuthorized(body swagger.WardenSubjectAuthorizationRequest) (*swagger.WardenSubjectAuthorizationResponse, *swagger.APIResponse, error)`. Please check out the changes to the request/response body as well.
   - `DoesWardenAllowTokenAccessRequest(body swagger.WardenTokenAccessRequest) (*swagger.WardenTokenAccessRequestResponse, *swagger.APIResponse, error)` is now `IsOAuth2AccessTokenAuthorized(body swagger.WardenOAuth2AccessTokenAuthorizationRequest) (*swagger.WardenOAuth2AccessTokenAuthorizationResponse, *swagger.APIResponse, error)`. Please check out the changes to the request/response body as well.
@@ -1109,7 +1109,7 @@ is typically a URL identifying the endpoint(s) the token is intended for. For ex
 endpoint `http://mydomain.com/users`, then the audience would be `http://mydomain.com/users`.
 
 This changes the payload of `/warden/token/allowed` and is incorporated in the new consent flow as well. Please note
-that it is currently not possible to set the audience of a token. This feature is tracked with [here](https://github.com/ory/hydra/issues/687).
+that it is currently not possible to set the audience of a token. This feature is tracked with [here](https://github.com/justpark/auth/hydra/issues/687).
 
 **IMPORTANT NOTE:** In OpenID Connect ID Tokens, the token is issued for that client. Thus, the `aud` claim must equal
 to the `client_id` that initiated the request.
@@ -1277,12 +1277,12 @@ release [here](https://github.com/ory/ladon/blob/master/HISTORY.md#060).
 #### Redis and RethinkDB deprecated
 
 Redis and RethinkDB are removed from the repository now and no longer supported, see
-[this issue](https://github.com/ory/hydra/issues/425).
+[this issue](https://github.com/justpark/auth/hydra/issues/425).
 
 #### Moved to ory namespace
 
 To reflect the GitHub organization rename, Hydra was moved from `https://github.com/ory-am/hydra` to
-`https://github.com/ory/hydra`.
+`https://github.com/justpark/auth/hydra`.
 
 #### SDK
 

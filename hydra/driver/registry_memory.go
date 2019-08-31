@@ -2,12 +2,12 @@ package driver
 
 import (
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/oauth2"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/oauth2"
+	"github.com/justpark/auth/hydra/x"
 
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/consent"
-	"github.com/ory/hydra/jwk"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/consent"
+	"github.com/justpark/auth/hydra/jwk"
 	"github.com/ory/x/dbal"
 )
 

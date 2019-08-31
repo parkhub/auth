@@ -1918,7 +1918,7 @@
         }
       },
       "x-go-name": "swaggerJSONWebKey",
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "JSONWebKeySet": {
       "type": "object",
@@ -1933,7 +1933,7 @@
         }
       },
       "x-go-name": "swaggerJSONWebKeySet",
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "PreviousConsentSession": {
       "description": "The response used to return used consent requests\nsame as HandledLoginRequest, just with consent_request exposed as json",
@@ -1973,7 +1973,7 @@
           "$ref": "#/definitions/consentRequestSession"
         }
       },
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "acceptConsentRequest": {
       "type": "object",
@@ -2011,7 +2011,7 @@
         }
       },
       "x-go-name": "HandledConsentRequest",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "acceptLoginRequest": {
       "type": "object",
@@ -2056,7 +2056,7 @@
         }
       },
       "x-go-name": "HandledLoginRequest",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "completedRequest": {
       "type": "object",
@@ -2069,7 +2069,7 @@
         }
       },
       "x-go-name": "RequestHandlerResponse",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "consentRequest": {
       "type": "object",
@@ -2142,7 +2142,7 @@
         }
       },
       "x-go-name": "ConsentRequest",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "consentRequestSession": {
       "type": "object",
@@ -2166,12 +2166,12 @@
         }
       },
       "x-go-name": "ConsentRequestSessionData",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "emptyResponse": {
       "description": "Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is\ntypically 201.",
       "type": "object",
-      "x-go-package": "github.com/ory/hydra"
+      "x-go-package": "github.com/justpark/auth/hydra"
     },
     "flushInactiveOAuth2TokensRequest": {
       "type": "object",
@@ -2184,7 +2184,7 @@
         }
       },
       "x-go-name": "FlushInactiveOAuth2TokensRequest",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "genericError": {
       "description": "Error responses are sent when an error (e.g. unauthorized, bad request, ...) occurred.",
@@ -2220,7 +2220,7 @@
           "example": "Object with ID 12345 does not exist"
         }
       },
-      "x-go-package": "github.com/ory/hydra"
+      "x-go-package": "github.com/justpark/auth/hydra"
     },
     "healthNotReadyStatus": {
       "type": "object",
@@ -2235,7 +2235,7 @@
         }
       },
       "x-go-name": "swaggerNotReadyStatus",
-      "x-go-package": "github.com/ory/hydra/vendor/github.com/ory/x/healthx"
+      "x-go-package": "github.com/justpark/auth/hydra/vendor/github.com/ory/x/healthx"
     },
     "healthStatus": {
       "type": "object",
@@ -2247,7 +2247,7 @@
         }
       },
       "x-go-name": "swaggerHealthStatus",
-      "x-go-package": "github.com/ory/hydra/vendor/github.com/ory/x/healthx"
+      "x-go-package": "github.com/justpark/auth/hydra/vendor/github.com/ory/x/healthx"
     },
     "jsonWebKeySetGeneratorRequest": {
       "type": "object",
@@ -2274,7 +2274,7 @@
         }
       },
       "x-go-name": "createRequest",
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "loginRequest": {
       "type": "object",
@@ -2329,7 +2329,7 @@
         }
       },
       "x-go-name": "LoginRequest",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "logoutRequest": {
       "type": "object",
@@ -2357,7 +2357,7 @@
         }
       },
       "x-go-name": "LogoutRequest",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "oAuth2Client": {
       "type": "object",
@@ -2548,7 +2548,7 @@
         }
       },
       "x-go-name": "Client",
-      "x-go-package": "github.com/ory/hydra/client"
+      "x-go-package": "github.com/justpark/auth/hydra/client"
     },
     "oAuth2TokenIntrospection": {
       "description": "https://tools.ietf.org/html/rfc7662",
@@ -2634,7 +2634,7 @@
         }
       },
       "x-go-name": "Introspection",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "oauth2TokenResponse": {
       "description": "The Access Token Response",
@@ -2658,7 +2658,7 @@
         }
       },
       "x-go-name": "swaggeroauth2TokenResponse",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "oauthTokenResponse": {
       "description": "The token response",
@@ -2699,7 +2699,7 @@
         }
       },
       "x-go-name": "swaggerOAuthTokenResponse",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "openIDConnectContext": {
       "type": "object",
@@ -2741,7 +2741,7 @@
         }
       },
       "x-go-name": "OpenIDConnectContext",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "rejectRequest": {
       "type": "object",
@@ -2770,7 +2770,7 @@
         }
       },
       "x-go-name": "RequestDeniedError",
-      "x-go-package": "github.com/ory/hydra/consent"
+      "x-go-package": "github.com/justpark/auth/hydra/consent"
     },
     "swaggerFlushInactiveAccessTokens": {
       "type": "object",
@@ -2779,7 +2779,7 @@
           "$ref": "#/definitions/flushInactiveOAuth2TokensRequest"
         }
       },
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "swaggerJsonWebKeyQuery": {
       "type": "object",
@@ -2799,7 +2799,7 @@
           "x-go-name": "Set"
         }
       },
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "swaggerJwkCreateSet": {
       "type": "object",
@@ -2816,7 +2816,7 @@
           "x-go-name": "Set"
         }
       },
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "swaggerJwkSetQuery": {
       "type": "object",
@@ -2830,7 +2830,7 @@
           "x-go-name": "Set"
         }
       },
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "swaggerJwkUpdateSet": {
       "type": "object",
@@ -2847,7 +2847,7 @@
           "x-go-name": "Set"
         }
       },
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "swaggerJwkUpdateSetKey": {
       "type": "object",
@@ -2870,7 +2870,7 @@
           "x-go-name": "Set"
         }
       },
-      "x-go-package": "github.com/ory/hydra/jwk"
+      "x-go-package": "github.com/justpark/auth/hydra/jwk"
     },
     "swaggerOAuthIntrospectionRequest": {
       "type": "object",
@@ -2889,7 +2889,7 @@
           "x-go-name": "Token"
         }
       },
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "swaggerRevokeOAuth2TokenParameters": {
       "type": "object",
@@ -2903,7 +2903,7 @@
           "x-go-name": "Token"
         }
       },
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "swaggeroauth2TokenParameters": {
       "type": "object",
@@ -2932,7 +2932,7 @@
           "x-go-name": "RedirectURI"
         }
       },
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "userinfoResponse": {
       "description": "The userinfo response",
@@ -3036,7 +3036,7 @@
         }
       },
       "x-go-name": "swaggeruserinfoResponsePayload",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     },
     "version": {
       "type": "object",
@@ -3048,7 +3048,7 @@
         }
       },
       "x-go-name": "swaggerVersion",
-      "x-go-package": "github.com/ory/hydra/vendor/github.com/ory/x/healthx"
+      "x-go-package": "github.com/justpark/auth/hydra/vendor/github.com/ory/x/healthx"
     },
     "wellKnown": {
       "description": "It includes links to several endpoints (e.g. /oauth2/token) and exposes information on supported signature algorithms\namong others.",
@@ -3224,7 +3224,7 @@
         }
       },
       "x-go-name": "WellKnown",
-      "x-go-package": "github.com/ory/hydra/oauth2"
+      "x-go-package": "github.com/justpark/auth/hydra/oauth2"
     }
   },
   "responses": {

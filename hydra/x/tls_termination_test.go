@@ -9,9 +9,9 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
-	. "github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
+	. "github.com/justpark/auth/hydra/x"
 )
 
 func panicHandler(w http.ResponseWriter, r *http.Request) {

@@ -27,14 +27,14 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 
-	"github.com/ory/hydra/internal"
+	"github.com/justpark/auth/hydra/internal"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/client"
-	. "github.com/ory/hydra/consent"
+	"github.com/justpark/auth/hydra/client"
+	. "github.com/justpark/auth/hydra/consent"
 )
 
 //func TestLogout(t *testing.T) {

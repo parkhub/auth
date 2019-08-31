@@ -25,20 +25,20 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/ory/hydra/sdk/go/hydra/client"
-	"github.com/ory/hydra/sdk/go/hydra/client/admin"
-	"github.com/ory/hydra/sdk/go/hydra/models"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client/admin"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/models"
 	"github.com/ory/x/pointerx"
 	"github.com/ory/x/urlx"
 
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 
-	"github.com/ory/hydra/internal"
+	"github.com/justpark/auth/hydra/internal"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/ory/hydra/jwk"
+	. "github.com/justpark/auth/hydra/jwk"
 )
 
 func TestJWKSDK(t *testing.T) {

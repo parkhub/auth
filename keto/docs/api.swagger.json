@@ -19,7 +19,7 @@
     },
     "license": {
       "name": "Apache 2.0",
-      "url": "https://github.com/ory/keto/blob/master/LICENSE"
+      "url": "https://github.com/justpark/auth/keto/blob/master/LICENSE"
     },
     "version": "Latest"
   },
@@ -805,7 +805,7 @@
           "x-go-name": "Scopes"
         }
       },
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "AuthenticationOAuth2IntrospectionRequest": {
       "type": "object",
@@ -824,16 +824,16 @@
           "x-go-name": "Token"
         }
       },
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "Authenticator": {
       "type": "object",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "Firewall": {
       "type": "object",
       "title": "Firewall offers various validation strategies for access tokens.",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "Handler": {
       "type": "object",
@@ -845,7 +845,7 @@
           "$ref": "#/definitions/Manager"
         }
       },
-      "x-go-package": "github.com/ory/keto/role"
+      "x-go-package": "github.com/justpark/auth/keto/role"
     },
     "IntrospectionResponse": {
       "type": "object",
@@ -910,19 +910,19 @@
           "x-go-name": "Username"
         }
       },
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "Manager": {
       "type": "object",
-      "x-go-package": "github.com/ory/keto/role"
+      "x-go-package": "github.com/justpark/auth/keto/role"
     },
     "OAuth2ClientCredentialsAuthentication": {
       "type": "object",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "OAuth2IntrospectionAuthentication": {
       "type": "object",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "Session": {
       "type": "object",
@@ -931,7 +931,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "WardenSubjectAuthorizationRequest": {
       "type": "object",
@@ -962,12 +962,12 @@
         }
       },
       "x-go-name": "AccessRequest",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "Writer": {
       "description": "Writer is a helper to write arbitrary data to a ResponseWriter",
       "type": "object",
-      "x-go-package": "github.com/ory/keto/vendor/github.com/ory/herodot"
+      "x-go-package": "github.com/justpark/auth/keto/vendor/github.com/ory/herodot"
     },
     "authenticationDefaultSession": {
       "type": "object",
@@ -984,7 +984,7 @@
         }
       },
       "x-go-name": "DefaultSession",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "authenticationOAuth2ClientCredentialsSession": {
       "type": "object",
@@ -1001,7 +1001,7 @@
         }
       },
       "x-go-name": "OAuth2ClientCredentialsSession",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "authenticationOAuth2Session": {
       "type": "object",
@@ -1069,7 +1069,7 @@
         }
       },
       "x-go-name": "OAuth2Session",
-      "x-go-package": "github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/keto/authentication"
     },
     "healthNotReadyStatus": {
       "type": "object",
@@ -1084,7 +1084,7 @@
         }
       },
       "x-go-name": "swaggerNotReadyStatus",
-      "x-go-package": "github.com/ory/keto/health"
+      "x-go-package": "github.com/justpark/auth/keto/health"
     },
     "healthStatus": {
       "type": "object",
@@ -1096,7 +1096,7 @@
         }
       },
       "x-go-name": "swaggerHealthStatus",
-      "x-go-package": "github.com/ory/keto/health"
+      "x-go-package": "github.com/justpark/auth/keto/health"
     },
     "policy": {
       "type": "object",
@@ -1163,7 +1163,7 @@
         }
       },
       "x-go-name": "swaggerPolicy",
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "role": {
       "description": "Role represents a group of users that share the same role. A role could be an administrator, a moderator, a regular\nuser or some other sort of role.",
@@ -1184,7 +1184,7 @@
         }
       },
       "x-go-name": "Role",
-      "x-go-package": "github.com/ory/keto/role"
+      "x-go-package": "github.com/justpark/auth/keto/role"
     },
     "roleMembers": {
       "type": "object",
@@ -1198,7 +1198,7 @@
         }
       },
       "x-go-name": "membersRequest",
-      "x-go-package": "github.com/ory/keto/role"
+      "x-go-package": "github.com/justpark/auth/keto/role"
     },
     "swaggerCreatePolicyParameters": {
       "type": "object",
@@ -1207,7 +1207,7 @@
           "$ref": "#/definitions/policy"
         }
       },
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "swaggerDoesWardenAllowAccessRequestParameters": {
       "type": "object",
@@ -1216,7 +1216,7 @@
           "$ref": "#/definitions/WardenSubjectAuthorizationRequest"
         }
       },
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "swaggerDoesWardenAllowClientRequestParameters": {
       "type": "object",
@@ -1225,7 +1225,7 @@
           "$ref": "#/definitions/wardenOAuth2ClientAuthorizationRequest"
         }
       },
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "swaggerDoesWardenAllowTokenAccessRequestParameters": {
       "type": "object",
@@ -1234,7 +1234,7 @@
           "$ref": "#/definitions/wardenOAuth2AccessTokenAuthorizationRequest"
         }
       },
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "swaggerGetPolicyParameters": {
       "type": "object",
@@ -1245,7 +1245,7 @@
           "x-go-name": "ID"
         }
       },
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "swaggerListPolicyParameters": {
       "type": "object",
@@ -1263,7 +1263,7 @@
           "x-go-name": "Offset"
         }
       },
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "swaggerListPolicyResponse": {
       "description": "A policy",
@@ -1277,7 +1277,7 @@
           }
         }
       },
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "swaggerUpdatePolicyParameters": {
       "type": "object",
@@ -1291,7 +1291,7 @@
           "x-go-name": "ID"
         }
       },
-      "x-go-package": "github.com/ory/keto/policy"
+      "x-go-package": "github.com/justpark/auth/keto/policy"
     },
     "swaggerWardenBaseRequest": {
       "description": "swager:model authorizedBaseRequest",
@@ -1316,7 +1316,7 @@
           "x-go-name": "Resource"
         }
       },
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "version": {
       "type": "object",
@@ -1327,7 +1327,7 @@
         }
       },
       "x-go-name": "swaggerVersion",
-      "x-go-package": "github.com/ory/keto/health"
+      "x-go-package": "github.com/justpark/auth/keto/health"
     },
     "wardenOAuth2AccessTokenAuthorizationRequest": {
       "type": "object",
@@ -1365,7 +1365,7 @@
         }
       },
       "x-go-name": "swaggerWardenTokenAccessRequest",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "wardenOAuth2AccessTokenAuthorizationResponse": {
       "type": "object",
@@ -1433,7 +1433,7 @@
         }
       },
       "x-go-name": "oauth2Authorization",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "wardenOAuth2ClientAuthorizationRequest": {
       "type": "object",
@@ -1475,7 +1475,7 @@
         }
       },
       "x-go-name": "swaggerWardenClientAccessRequest",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "wardenOAuth2ClientAuthorizationResponse": {
       "type": "object",
@@ -1492,7 +1492,7 @@
         }
       },
       "x-go-name": "oauth2ClientAuthorization",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     },
     "wardenSubjectAuthorizationResponse": {
       "type": "object",
@@ -1509,7 +1509,7 @@
         }
       },
       "x-go-name": "subjectAuthorization",
-      "x-go-package": "github.com/ory/keto/warden"
+      "x-go-package": "github.com/justpark/auth/keto/warden"
     }
   },
   "responses": {

@@ -24,8 +24,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ory/keto/role"
-	"github.com/ory/keto/warden"
+	"github.com/justpark/auth/keto/role"
+	"github.com/justpark/auth/keto/warden"
 	"github.com/ory/ladon"
 	"github.com/ory/ladon/manager/memory"
 	"github.com/sirupsen/logrus"

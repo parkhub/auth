@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: resource-server
+  name: resource-server
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: resource-server
+    spec:
+      containers:
+      - env:
+        - name: KETO_URL
+          value: http://keto:4466
+        - name: OATHKEEPER_KEY_URL
+          value: http://oathkeeper-api:4456/.well-known/jwks.json
+        - name: OAUTH2_INTROSPECT_URL
+          value: http://hydra:4445/oauth2/introspect
+        - name: PORT
+          value: "4478"
+        image: resource-server
+        name: resource-server
+        ports:
+        - containerPort: 4478
+        resources: {}
+      restartPolicy: Always
+status: {}

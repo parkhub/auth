@@ -401,7 +401,7 @@
           "x-go-name": "ClientSecret"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "AuthenticationOAuth2IntrospectionRequest": {
       "type": "object",
@@ -420,11 +420,11 @@
           "x-go-name": "Token"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "Authenticator": {
       "type": "object",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "IntrospectionResponse": {
       "type": "object",
@@ -489,15 +489,15 @@
           "x-go-name": "Username"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "OAuth2ClientCredentialsAuthentication": {
       "type": "object",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "OAuth2IntrospectionAuthentication": {
       "type": "object",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "Session": {
       "type": "object",
@@ -506,7 +506,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "Upstream": {
       "type": "object",
@@ -527,7 +527,7 @@
           "x-go-name": "URL"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "authenticationDefaultSession": {
       "type": "object",
@@ -544,7 +544,7 @@
         }
       },
       "x-go-name": "DefaultSession",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "authenticationOAuth2ClientCredentialsSession": {
       "type": "object",
@@ -561,7 +561,7 @@
         }
       },
       "x-go-name": "OAuth2ClientCredentialsSession",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "authenticationOAuth2Session": {
       "type": "object",
@@ -629,7 +629,7 @@
         }
       },
       "x-go-name": "OAuth2Session",
-      "x-go-package": "github.com/ory/oathkeeper/vendor/github.com/ory/keto/authentication"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/vendor/github.com/justpark/auth/keto/authentication"
     },
     "healthNotReadyStatus": {
       "type": "object",
@@ -644,7 +644,7 @@
         }
       },
       "x-go-name": "swaggerNotReadyStatus",
-      "x-go-package": "github.com/ory/oathkeeper/health"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/health"
     },
     "healthStatus": {
       "type": "object",
@@ -656,7 +656,7 @@
         }
       },
       "x-go-name": "swaggerHealthStatus",
-      "x-go-package": "github.com/ory/oathkeeper/health"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/health"
     },
     "jsonWebKey": {
       "type": "object",
@@ -739,7 +739,7 @@
         }
       },
       "x-go-name": "swaggerJSONWebKey",
-      "x-go-package": "github.com/ory/oathkeeper/rsakey"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rsakey"
     },
     "jsonWebKeySet": {
       "type": "object",
@@ -754,7 +754,7 @@
         }
       },
       "x-go-name": "swaggerJSONWebKeySet",
-      "x-go-package": "github.com/ory/oathkeeper/rsakey"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rsakey"
     },
     "rule": {
       "type": "object",
@@ -792,7 +792,7 @@
         }
       },
       "x-go-name": "swaggerRule",
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "ruleHandler": {
       "type": "object",
@@ -809,7 +809,7 @@
         }
       },
       "x-go-name": "swaggerRuleHandler",
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "ruleMatch": {
       "type": "object",
@@ -829,7 +829,7 @@
         }
       },
       "x-go-name": "swaggerRuleMatch",
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerCreateRuleParameters": {
       "type": "object",
@@ -838,7 +838,7 @@
           "$ref": "#/definitions/rule"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerGetRuleParameters": {
       "type": "object",
@@ -852,7 +852,7 @@
           "x-go-name": "ID"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerListRulesParameters": {
       "type": "object",
@@ -870,7 +870,7 @@
           "x-go-name": "Offset"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerRuleResponse": {
       "description": "A rule",
@@ -880,7 +880,7 @@
           "$ref": "#/definitions/rule"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerRulesResponse": {
       "description": "A list of rules",
@@ -894,7 +894,7 @@
           }
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "swaggerUpdateRuleParameters": {
       "type": "object",
@@ -911,7 +911,7 @@
           "x-go-name": "ID"
         }
       },
-      "x-go-package": "github.com/ory/oathkeeper/rule"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/rule"
     },
     "version": {
       "type": "object",
@@ -922,7 +922,7 @@
         }
       },
       "x-go-name": "swaggerVersion",
-      "x-go-package": "github.com/ory/oathkeeper/health"
+      "x-go-package": "github.com/justpark/auth/oathkeeper/health"
     }
   },
   "responses": {

@@ -41,7 +41,7 @@ wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/d
     && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 sudo pip install docker-compose
 
-git clone https://github.com/ory/hydra-login-consent-node.git
+git clone https://github.com/justpark/auth/hydra-login-consent-node.git
 
 docker run -d --name kong-database \
                  -p 5432:5432 \

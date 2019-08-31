@@ -31,7 +31,7 @@ import (
 	"crypto/rsa"
 
 	"github.com/ory/dockertest"
-	"github.com/ory/hydra/sdk/go/hydra"
+	"github.com/justpark/auth/hydra/sdk/go/hydra"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

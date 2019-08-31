@@ -23,8 +23,8 @@ package rule
 import (
 	"net/http"
 
-	"github.com/ory/oathkeeper/pkg"
-	"github.com/ory/oathkeeper/sdk/go/oathkeeper"
+	"github.com/justpark/auth/oathkeeper/pkg"
+	"github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper"
 	"github.com/pkg/errors"
 )
 

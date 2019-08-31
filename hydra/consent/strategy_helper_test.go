@@ -24,13 +24,13 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ory/hydra/sdk/go/hydra/client/admin"
-	"github.com/ory/hydra/sdk/go/hydra/models"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client/admin"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/models"
 	"github.com/ory/x/pointerx"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/sdk/go/hydra/client"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client"
 )
 
 var passAuthentication = func(apiClient *client.OryHydra, remember bool) func(t *testing.T) func(w http.ResponseWriter, r *http.Request) {

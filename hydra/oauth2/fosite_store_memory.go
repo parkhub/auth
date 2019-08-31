@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 
 	"github.com/pkg/errors"
 

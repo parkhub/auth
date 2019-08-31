@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: resource-server
+  name: resource-server
+spec:
+  ports:
+  - name: "4478"
+    port: 4478
+    targetPort: 4478
+  selector:
+    io.kompose.service: resource-server
+status:
+  loadBalancer: {}

@@ -1,6 +1,6 @@
 package keto
 
-import "github.com/ory/keto/sdk/go/keto/swagger"
+import "github.com/justpark/auth/keto/sdk/go/keto/swagger"
 
 type WardenSDK interface {
 	IsSubjectAuthorized(body swagger.WardenSubjectAuthorizationRequest) (*swagger.WardenSubjectAuthorizationResponse, *swagger.APIResponse, error)

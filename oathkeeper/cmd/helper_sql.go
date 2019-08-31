@@ -24,7 +24,7 @@ import (
 	"net/url"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/ory/sqlcon"
 	"github.com/pkg/errors"
 )

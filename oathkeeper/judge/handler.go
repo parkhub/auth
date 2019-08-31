@@ -25,9 +25,9 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/ory/herodot"
-	"github.com/ory/oathkeeper/proxy"
-	"github.com/ory/oathkeeper/rsakey"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/proxy"
+	"github.com/justpark/auth/oathkeeper/rsakey"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/sirupsen/logrus"
 )
 

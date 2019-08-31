@@ -5,10 +5,10 @@ package driver
 import (
 	"github.com/jmoiron/sqlx"
 
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/consent"
-	"github.com/ory/hydra/jwk"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/consent"
+	"github.com/justpark/auth/hydra/jwk"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/dbal"
 	"github.com/ory/x/sqlcon"
 	"github.com/ory/x/urlx"

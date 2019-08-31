@@ -20,7 +20,7 @@
 
 package oathkeeper
 
-import "github.com/ory/oathkeeper/sdk/go/oathkeeper/swagger"
+import "github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper/swagger"
 
 type SDK interface {
 	CreateRule(body swagger.Rule) (*swagger.Rule, *swagger.APIResponse, error)

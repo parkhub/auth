@@ -25,7 +25,7 @@ import (
 
 	"net/http"
 
-	"github.com/ory/oathkeeper/sdk/go/oathkeeper"
+	"github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper"
 	"github.com/spf13/cobra"
 )
 

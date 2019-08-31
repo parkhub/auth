@@ -31,14 +31,14 @@ import (
 	"github.com/spf13/viper"
 
 	"github.com/ory/fosite"
-	. "github.com/ory/hydra/driver"
-	"github.com/ory/hydra/internal"
-	"github.com/ory/hydra/oauth2"
+	. "github.com/justpark/auth/hydra/driver"
+	"github.com/justpark/auth/hydra/internal"
+	"github.com/justpark/auth/hydra/oauth2"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 )
 
 func TestOAuth2AwareCORSMiddleware(t *testing.T) {

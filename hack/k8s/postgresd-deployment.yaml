@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: postgresd
+  name: postgresd
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: postgresd
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: accesscontroldb
+        - name: POSTGRES_PASSWORD
+          value: secret
+        - name: POSTGRES_USER
+          value: dbuser
+        image: postgres:9.6
+        name: postgresd
+        resources: {}
+      restartPolicy: Always
+status: {}

@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ory/keto/cmd/client"
+	"github.com/justpark/auth/keto/cmd/client"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

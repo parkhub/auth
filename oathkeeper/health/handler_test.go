@@ -28,7 +28,7 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/ory/herodot"
-	"github.com/ory/oathkeeper/sdk/go/oathkeeper/swagger"
+	"github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper/swagger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

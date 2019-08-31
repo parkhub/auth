@@ -1,7 +1,7 @@
 package driver
 
 import (
-	"github.com/ory/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/driver/configuration"
 )
 
 type Driver interface {

@@ -26,8 +26,8 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/ory/herodot"
-	"github.com/ory/oathkeeper/helper"
-	"github.com/ory/oathkeeper/pkg"
+	"github.com/justpark/auth/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/pkg"
 	"github.com/ory/pagination"
 	"github.com/pborman/uuid"
 	"github.com/pkg/errors"

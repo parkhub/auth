@@ -27,8 +27,8 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/ory/oathkeeper/rsakey"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rsakey"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/pborman/uuid"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"

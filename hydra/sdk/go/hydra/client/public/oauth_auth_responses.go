@@ -13,7 +13,7 @@ import (
 
 	strfmt "github.com/go-openapi/strfmt"
 
-	models "github.com/ory/hydra/sdk/go/hydra/models"
+	models "github.com/justpark/auth/hydra/sdk/go/hydra/models"
 )
 
 // OauthAuthReader is a Reader for the OauthAuth structure.

@@ -31,8 +31,8 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/ory/hydra/client"
-	"github.com/ory/hydra/internal"
+	. "github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/internal"
 	"github.com/ory/x/sqlcon/dockertest"
 )
 

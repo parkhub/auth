@@ -30,7 +30,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 	"github.com/ory/x/dbal"
 	"github.com/ory/x/stringsx"
 )

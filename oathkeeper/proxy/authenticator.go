@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/go-errors/errors"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rule"
 )
 
 var ErrAuthenticatorNotResponsible = errors.New("Authenticator not responsible")

@@ -28,12 +28,12 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/ory/hydra/driver"
+	"github.com/justpark/auth/hydra/driver"
 
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/ory/hydra/jwk"
+	"github.com/justpark/auth/hydra/jwk"
 	"github.com/ory/x/tlsx"
 )
 

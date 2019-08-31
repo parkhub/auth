@@ -29,7 +29,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ory/hydra/cmd/cli"
+	"github.com/justpark/auth/hydra/cmd/cli"
 
 	"github.com/spf13/cobra"
 	"golang.org/x/oauth2"

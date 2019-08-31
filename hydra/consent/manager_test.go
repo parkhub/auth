@@ -32,11 +32,11 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
-	. "github.com/ory/hydra/consent"
-	"github.com/ory/hydra/driver"
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
-	"github.com/ory/hydra/x"
+	. "github.com/justpark/auth/hydra/consent"
+	"github.com/justpark/auth/hydra/driver"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/sqlcon/dockertest"
 )
 

@@ -28,7 +28,7 @@ import (
 	"encoding/pem"
 	"fmt"
 
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 
 	"github.com/pborman/uuid"
 	"github.com/pkg/errors"

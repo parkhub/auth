@@ -28,8 +28,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ory/hydra/sdk/go/hydra/client/admin"
-	"github.com/ory/hydra/sdk/go/hydra/models"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client/admin"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/models"
 	"github.com/ory/x/pointerx"
 
 	"github.com/mendsley/gojwk"

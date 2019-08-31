@@ -30,7 +30,7 @@ import (
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/sdk/go/hydra/swagger"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/swagger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

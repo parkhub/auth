@@ -24,14 +24,14 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ory/hydra/internal"
+	"github.com/justpark/auth/hydra/internal"
 
 	jwt2 "github.com/dgrijalva/jwt-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
 	"github.com/ory/fosite/token/jwt"
-	. "github.com/ory/hydra/jwk"
+	. "github.com/justpark/auth/hydra/jwk"
 )
 
 func TestRS256JWTStrategy(t *testing.T) {

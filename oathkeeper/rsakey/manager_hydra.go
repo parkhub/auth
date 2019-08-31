@@ -28,8 +28,8 @@ import (
 
 	"strings"
 
-	"github.com/ory/hydra/sdk/go/hydra"
-	"github.com/ory/hydra/sdk/go/hydra/swagger"
+	"github.com/justpark/auth/hydra/sdk/go/hydra"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/swagger"
 	"github.com/pkg/errors"
 	"gopkg.in/square/go-jose.v2"
 )

@@ -37,10 +37,10 @@ import (
 	"github.com/ory/fosite"
 	"github.com/ory/fosite/handler/openid"
 	"github.com/ory/fosite/token/jwt"
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/consent"
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/consent"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/urlx"
 )
 

@@ -27,7 +27,7 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 	"github.com/ory/x/mapx"
 )
 

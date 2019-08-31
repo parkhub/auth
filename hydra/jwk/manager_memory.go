@@ -30,7 +30,7 @@ import (
 	jose "gopkg.in/square/go-jose.v2"
 
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 )
 
 type MemoryManager struct {

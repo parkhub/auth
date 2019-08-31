@@ -19,7 +19,7 @@ import (
 
 	"os"
 
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

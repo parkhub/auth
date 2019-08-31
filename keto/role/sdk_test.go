@@ -28,8 +28,8 @@ import (
 	"github.com/julienschmidt/httprouter"
 	_ "github.com/lib/pq"
 	"github.com/ory/herodot"
-	. "github.com/ory/keto/role"
-	keto "github.com/ory/keto/sdk/go/keto/swagger"
+	. "github.com/justpark/auth/keto/role"
+	keto "github.com/justpark/auth/keto/sdk/go/keto/swagger"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -28,9 +28,9 @@ import (
 
 	"bytes"
 
-	"github.com/ory/oathkeeper/rule"
-	"github.com/ory/oathkeeper/sdk/go/oathkeeper"
-	"github.com/ory/oathkeeper/sdk/go/oathkeeper/swagger"
+	"github.com/justpark/auth/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper"
+	"github.com/justpark/auth/oathkeeper/sdk/go/oathkeeper/swagger"
 	"github.com/spf13/cobra"
 )
 

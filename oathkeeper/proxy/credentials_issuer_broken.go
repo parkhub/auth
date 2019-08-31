@@ -25,7 +25,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rule"
 )
 
 type CredentialsIssuerBroken struct{}

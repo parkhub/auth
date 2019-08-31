@@ -23,7 +23,7 @@ package consent
 import (
 	"context"
 
-	"github.com/ory/hydra/client"
+	"github.com/justpark/auth/hydra/client"
 )
 
 var _, _ Manager = new(SQLManager), new(MemoryManager)

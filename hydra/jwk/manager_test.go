@@ -29,9 +29,9 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/internal"
-	. "github.com/ory/hydra/jwk"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/internal"
+	. "github.com/justpark/auth/hydra/jwk"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/sqlcon/dockertest"
 )
 

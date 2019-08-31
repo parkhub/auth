@@ -25,7 +25,7 @@ import (
 
 	"github.com/asaskevich/govalidator"
 	"github.com/ory/go-convenience/stringslice"
-	"github.com/ory/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/helper"
 	"github.com/pkg/errors"
 )
 

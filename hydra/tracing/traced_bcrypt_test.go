@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/ory/hydra/tracing"
+	"github.com/justpark/auth/hydra/tracing"
 )
 
 func TestCompare(t *testing.T) {

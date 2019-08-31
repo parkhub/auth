@@ -32,9 +32,9 @@ import (
 	"github.com/stretchr/testify/require"
 	jose "gopkg.in/square/go-jose.v2"
 
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
+	"github.com/justpark/auth/hydra/x"
 )
 
 func TestHandlerWellKnown(t *testing.T) {

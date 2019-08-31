@@ -25,7 +25,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/pkg/errors"

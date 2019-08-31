@@ -8,7 +8,7 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

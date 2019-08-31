@@ -1,0 +1,47 @@
+apiVersion: skaffold/v1beta12
+kind: Config
+build:
+  artifacts:
+  - image: oathkeeper
+    context: ./
+    docker:
+      dockerfile: ./oathkeeper/Dockerfile
+#  - image: keto
+#    context: ./
+#    docker:
+#      dockerfile: ./keto/Dockerfile
+#  - image: hydra
+#    context: ./
+#    docker:
+#      dockerfile: ./hydra/Dockerfile
+  local:
+    push: false
+    useDockerCLI: true
+    useBuildkit: false
+deploy:
+  kubectl:
+    manifests:
+    - hack/k8s/postgresd-deployment.yaml
+#    - hack/k8s/configurator-pod.yaml
+#    - hack/k8s/consumer-localhost-deployment.yaml
+#    - hack/k8s/consumer-localhost-service.yaml
+    - hack/k8s/hydra-migrate-pod.yaml
+    - hack/k8s/hydra-pod.yaml
+    - hack/k8s/hydra-service.yaml
+#    - hack/k8s/identity-provider-pod.yaml
+#    - hack/k8s/identity-provider-service.yaml
+    - hack/k8s/keto-migrate-pod.yaml
+    - hack/k8s/keto-pod.yaml
+    - hack/k8s/keto-service.yaml
+    - hack/k8s/oathkeeper-api-pod.yaml
+    - hack/k8s/oathkeeper-api-service.yaml
+    - hack/k8s/oathkeeper-migrate-pod.yaml
+    - hack/k8s/oathkeeper-proxy-pod.yaml
+    - hack/k8s/oathkeeper-proxy-service.yaml
+#    - hack/k8s/resource-server-deployment.yaml
+#    - hack/k8s/resource-server-service.yaml
+portForward:
+  - resourceType: deployment
+    resourceName: foo
+    port: 8080
+    localPort: 9000

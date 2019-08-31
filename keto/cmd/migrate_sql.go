@@ -15,7 +15,7 @@
 package cmd
 
 import (
-	"github.com/ory/keto/cmd/server"
+	"github.com/justpark/auth/keto/cmd/server"
 	"github.com/spf13/cobra"
 )
 

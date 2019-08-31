@@ -25,8 +25,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/oauth2"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/oauth2"
 
 	"github.com/gobwas/glob"
 	"github.com/rs/cors"

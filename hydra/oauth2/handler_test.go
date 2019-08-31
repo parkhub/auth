@@ -34,16 +34,16 @@ import (
 
 	"github.com/go-openapi/strfmt"
 
-	"github.com/ory/hydra/sdk/go/hydra/client/admin"
-	"github.com/ory/hydra/sdk/go/hydra/models"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/client/admin"
+	"github.com/justpark/auth/hydra/sdk/go/hydra/models"
 
-	"github.com/ory/hydra/jwk"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/jwk"
+	"github.com/justpark/auth/hydra/x"
 
 	"github.com/spf13/viper"
 
-	"github.com/ory/hydra/driver/configuration"
-	"github.com/ory/hydra/internal"
+	"github.com/justpark/auth/hydra/driver/configuration"
+	"github.com/justpark/auth/hydra/internal"
 	"github.com/ory/x/urlx"
 
 	jwt2 "github.com/dgrijalva/jwt-go"
@@ -55,9 +55,9 @@ import (
 	"github.com/ory/fosite"
 	"github.com/ory/fosite/handler/openid"
 	"github.com/ory/fosite/token/jwt"
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/oauth2"
-	hydra "github.com/ory/hydra/sdk/go/hydra/client"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/oauth2"
+	hydra "github.com/justpark/auth/hydra/sdk/go/hydra/client"
 )
 
 var lifespan = time.Hour

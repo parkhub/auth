@@ -32,7 +32,7 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/ory/fosite"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/pagination"
 	"github.com/ory/x/urlx"
 )

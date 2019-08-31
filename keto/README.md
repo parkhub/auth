@@ -6,7 +6,7 @@
     <a href="http://eepurl.com/di390P">Newsletter</a><br/><br/>
     <a href="https://www.ory.sh/docs/guides/master/keto/">Guide</a> |
     <a href="https://www.ory.sh/docs/api/keto?version=master">API Docs</a> |
-    <a href="https://godoc.org/github.com/ory/keto">Code Docs</a><br/><br/>
+    <a href="https://godoc.org/github.com/justpark/auth/keto">Code Docs</a><br/><br/>
     <a href="https://opencollective.com/ory">Support this project!</a>
 </h4>
 
@@ -17,7 +17,7 @@ a subject, for example user, application, service, car, etc., is authorized to p
 <p align="left">
     <a href="https://circleci.com/gh/ory/keto/tree/master"><img src="https://circleci.com/gh/ory/keto/tree/master.svg?style=shield" alt="Build Status"></a>
     <a href="https://coveralls.io/github/ory/keto?branch=master"><img src="https://coveralls.io/repos/ory/keto/badge.svg?branch=master&service=github" alt="Coverage Status"></a>
-    <a href="https://goreportcard.com/report/github.com/ory/keto"><img src="https://goreportcard.com/badge/github.com/ory/keto" alt="Go Report Card"></a>
+    <a href="https://goreportcard.com/report/github.com/justpark/auth/keto"><img src="https://goreportcard.com/badge/github.com/justpark/auth/keto" alt="Go Report Card"></a>
 </p>
 
 
@@ -67,7 +67,7 @@ There are various ways of installing ORY keto on your system.
 
 #### 1. Download binaries
 
-The client and server **binaries are downloadable at [releases](https://github.com/ory/keto/releases)**.
+The client and server **binaries are downloadable at [releases](https://github.com/justpark/auth/keto/releases)**.
 There is no installer yet available. Add the ORY keto binary to the PATH environment variable or add
 the binary to a location already in your path (`/usr/bin`, ...).
 If these download instructions are unclear, ask for clarification in our [chat channel](https://www.ory.sh/chat). We are happy to help.
@@ -95,14 +95,14 @@ The following commands check out the latest ORY keto's release tag, compile it a
 works as expected. Please note that this will only work with a linux shell like bash or sh.
 
 ```
-go get -d -u github.com/ory/keto
-cd $(go env GOPATH)/src/github.com/ory/keto
+go get -d -u github.com/justpark/auth/keto
+cd $(go env GOPATH)/src/github.com/justpark/auth/keto
 keto_LATEST=$(git describe --abbrev=0 --tags)
 git checkout $keto_LATEST
 dep ensure -vendor-only
 go install \
-    -ldflags "-X github.com/ory/keto/cmd.Version=$keto_LATEST -X github.com/ory/keto/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/ory/keto/cmd.GitHash=`git rev-parse HEAD`" \
-    github.com/ory/keto
+    -ldflags "-X github.com/justpark/auth/keto/cmd.Version=$keto_LATEST -X github.com/justpark/auth/keto/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/justpark/auth/keto/cmd.GitHash=`git rev-parse HEAD`" \
+    github.com/justpark/auth/keto
 git checkout master
 keto help
 ```
@@ -120,13 +120,13 @@ ORY Oathkeeper, and ORY Keto.
 
 ### ORY Hydra: OAuth2 & OpenID Connect Server
 
-[ORY Hydra](https://github.com/ory/hydra) ORY Hydra is a hardened OAuth2 and OpenID Connect server optimized
+[ORY Hydra](https://github.com/justpark/auth/hydra) ORY Hydra is a hardened OAuth2 and OpenID Connect server optimized
 for low-latency, high throughput, and low resource consumption. ORY Hydra is not an identity provider, which would include 
 user sign up, user log in, password reset flow. Hydra but connects to your existing identity provider through a consent app.
 
 ### ORY Oathkeeper: Identity & Access Proxy
 
-[ORY Oathkeeper](https://github.com/ory/oathkeeper) is a BeyondCorp/Zero Trust Identity & Access Proxy (IAP) built
+[ORY Oathkeeper](https://github.com/justpark/auth/oathkeeper) is a BeyondCorp/Zero Trust Identity & Access Proxy (IAP) built
 on top of OAuth2 and ORY Hydra.
 
 ### Examples

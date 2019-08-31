@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: oathkeeper-api
+  name: oathkeeper-api
+spec:
+  containers:
+  - args:
+    - serve
+    - api
+    env:
+    - name: AUTHENTICATOR_OAUTH2_CLIENT_CREDENTIALS_TOKEN_URL
+      value: http://hydra:4444/oauth2/token
+    - name: AUTHENTICATOR_OAUTH2_INTROSPECTION_URL
+      value: http://hydra:4445/oauth2/introspect
+    - name: AUTHORIZER_KETO_URL
+      value: http://keto:4466
+    - name: CORS_ALLOWED_METHODS
+      value: POST,GET,PUT,DELETE
+    - name: CORS_ENABLED
+      value: "true"
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_ALGORITHM
+      value: ory-hydra
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_HYDRA_ADMIN_URL
+      value: http://hydra:4445
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_HYDRA_JWK_SET_ID
+      value: resources:hydra:jwk:oathkeeper
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_ISSUER
+      value: http://oathkeeper-api:4456
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_JWK_REFRESH_INTERVAL
+      value: 30m
+    - name: CREDENTIALS_ISSUER_ID_TOKEN_LIFESPAN
+      value: 1h
+    - name: DATABASE_URL
+      value: postgres://dbuser:secret@postgresd:5432/accesscontroldb?sslmode=disable
+    - name: ISSUER_URL
+      value: http://:4455/
+    - name: LOG_LEVEL
+      value: debug
+    - name: PORT
+      value: "4456"
+    image: 'oryd/oathkeeper:'
+    name: oathkeeper-api
+    ports:
+    - containerPort: 4456
+    resources: {}
+  restartPolicy: OnFailure
+status: {}

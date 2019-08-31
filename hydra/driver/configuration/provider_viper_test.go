@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/logrusx"
 )
 

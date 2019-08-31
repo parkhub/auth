@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/asaskevich/govalidator"
-	"github.com/ory/keto/sdk/go/keto"
-	"github.com/ory/keto/sdk/go/keto/swagger"
-	"github.com/ory/oathkeeper/helper"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/keto/sdk/go/keto"
+	"github.com/justpark/auth/keto/sdk/go/keto/swagger"
+	"github.com/justpark/auth/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/pkg/errors"
 	"github.com/tomasen/realip"
 )

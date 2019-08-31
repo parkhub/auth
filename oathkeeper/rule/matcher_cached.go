@@ -25,8 +25,8 @@ import (
 
 	"sync"
 
-	"github.com/ory/oathkeeper/helper"
-	"github.com/ory/oathkeeper/pkg"
+	"github.com/justpark/auth/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/pkg"
 	"github.com/pkg/errors"
 )
 

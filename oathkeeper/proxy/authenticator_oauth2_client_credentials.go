@@ -8,8 +8,8 @@ import (
 
 	"net/url"
 
-	"github.com/ory/oathkeeper/helper"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/pkg/errors"
 	"golang.org/x/oauth2/clientcredentials"
 )

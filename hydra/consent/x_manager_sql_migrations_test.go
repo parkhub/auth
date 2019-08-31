@@ -8,10 +8,10 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ory/hydra/client"
-	"github.com/ory/hydra/consent"
-	"github.com/ory/hydra/internal"
-	"github.com/ory/hydra/x"
+	"github.com/justpark/auth/hydra/client"
+	"github.com/justpark/auth/hydra/consent"
+	"github.com/justpark/auth/hydra/internal"
+	"github.com/justpark/auth/hydra/x"
 	"github.com/ory/x/dbal"
 	"github.com/ory/x/dbal/migratest"
 )

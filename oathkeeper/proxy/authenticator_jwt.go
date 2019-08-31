@@ -16,8 +16,8 @@ import (
 	"github.com/ory/go-convenience/jwtx"
 	"github.com/ory/go-convenience/mapx"
 	"github.com/ory/go-convenience/stringslice"
-	"github.com/ory/oathkeeper/helper"
-	"github.com/ory/oathkeeper/rule"
+	"github.com/justpark/auth/oathkeeper/helper"
+	"github.com/justpark/auth/oathkeeper/rule"
 	"github.com/pkg/errors"
 	"gopkg.in/square/go-jose.v2"
 )

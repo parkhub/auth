@@ -31,7 +31,7 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-errors/errors"
-	"github.com/ory/oathkeeper/rsakey"
+	"github.com/justpark/auth/oathkeeper/rsakey"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

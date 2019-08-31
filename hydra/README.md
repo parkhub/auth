@@ -6,7 +6,7 @@
     <a href="http://eepurl.com/di390P">Newsletter</a><br/><br/>
     <a href="https://www.ory.sh/docs/next/hydra/">Guide</a> |
     <a href="https://www.ory.sh/docs/next/hydra/sdk/api">API Docs</a> |
-    <a href="https://godoc.org/github.com/ory/hydra">Code Docs</a><br/><br/>
+    <a href="https://godoc.org/github.com/justpark/auth/hydra">Code Docs</a><br/><br/>
     <a href="https://opencollective.com/ory">Support this project!</a>
 </h4>
 
@@ -16,7 +16,7 @@ ORY Hydra is a hardened, certified OAuth2 and OpenID Connect server optimized fo
 and low resource consumption. ORY Hydra *is not* an identity provider (user sign up, user log in, password reset flow),
 but connects to your existing identity provider through a [consent app](https://www.ory.sh/docs/next/hydra/oauth2#authenticating-users-and-requesting-consent).
 Implementing the consent app in a different language is easy, and exemplary consent apps
-([Go](https://github.com/ory/hydra-consent-app-go), [Node](https://github.com/ory/hydra-consent-app-express)) and
+([Go](https://github.com/justpark/auth/hydra-consent-app-go), [Node](https://github.com/justpark/auth/hydra-consent-app-express)) and
 [SDKs](https://www.ory.sh/docs/next/hydra/sdk/) are provided.
 
 Besides mitigating various attack vectors, such as database compromisation and OAuth 2.0 weaknesses, ORY Hydra is also
@@ -26,7 +26,7 @@ able to securely manage JSON Web Keys.
 <p align="left">
     <a href="https://circleci.com/gh/ory/hydra/tree/master"><img src="https://circleci.com/gh/ory/hydra/tree/master.svg?style=shield" alt="Build Status"></a>
     <a href="https://coveralls.io/github/ory/hydra?branch=master"> <img src="https://coveralls.io/repos/ory/hydra/badge.svg?branch=master&service=github" alt="Coverage Status"></a>
-    <a href="https://goreportcard.com/report/github.com/ory/hydra"><img src="https://goreportcard.com/badge/github.com/ory/hydra" alt="Go Report Card"></a>
+    <a href="https://goreportcard.com/report/github.com/justpark/auth/hydra"><img src="https://goreportcard.com/badge/github.com/justpark/auth/hydra" alt="Go Report Card"></a>
     <a href="https://bestpractices.coreinfrastructure.org/projects/364"><img src="https://bestpractices.coreinfrastructure.org/projects/364/badge" alt="CII Best Practices"></a>
     <a href="#backers" alt="sponsors on Open Collective"><img src="https://opencollective.com/ory/backers/badge.svg" /></a> <a href="#sponsors" alt="Sponsors on Open Collective"><img src="https://opencollective.com/ory/sponsors/badge.svg" /></a>
 </p>
@@ -117,7 +117,7 @@ The following OpenID profiles are certified:
 * [OpenID Provider Publishing Configuration Information](https://openid.net/specs/openid-connect-discovery-1_0.html)
 * [Dynamic OpenID Provider](https://openid.net/specs/openid-connect-registration-1_0.html)
 
-To obtain certification, we deployed the [reference user login and consent app](https://github.com/ory/hydra-login-consent-node)
+To obtain certification, we deployed the [reference user login and consent app](https://github.com/justpark/auth/hydra-login-consent-node)
 (unmodified) and ORY Hydra v1.0.0.
 
 ## Quickstart
@@ -154,12 +154,12 @@ ORY Oathkeeper, and ORY Keto.
 
 ### ORY Oathkeeper: Identity & Access Proxy
 
-[ORY Oathkeeper](https://github.com/ory/oathkeeper) is a BeyondCorp/Zero Trust Identity & Access Proxy (IAP) built
+[ORY Oathkeeper](https://github.com/justpark/auth/oathkeeper) is a BeyondCorp/Zero Trust Identity & Access Proxy (IAP) built
 on top of OAuth2 and ORY Hydra.
 
 ### ORY Keto: Access Control Policies as a Server
 
-[ORY Keto](https://github.com/ory/keto) is a policy decision point. It uses a set of access control policies, similar
+[ORY Keto](https://github.com/justpark/auth/keto) is a policy decision point. It uses a set of access control policies, similar
 to AWS IAM Policies, in order to determine whether a subject (user, application, service, car, ...) is authorized to
 perform a certain action on a resource.
 
@@ -215,8 +215,8 @@ Run `hydra -h` or `hydra help`.
 Developing with ORY Hydra is as easy as:
 
 ```
-go get -d -u github.com/ory/hydra
-cd $GOPATH/src/github.com/ory/hydra
+go get -d -u github.com/justpark/auth/hydra
+cd $GOPATH/src/github.com/justpark/auth/hydra
 make init
 export GO111MODULE=on
 ## With database
@@ -234,12 +234,12 @@ DSN=memory go run main.go serve all
 **Notes**
 
 * We changed organization name from `ory-am` to `ory`. In order to keep backwards compatibility, we did not rename Go packages.
-* You can ignore warnings similar to `package github.com/ory/hydra/cmd/server: case-insensitive import collision: "github.com/sirupsen/logrus" and "github.com/sirupsen/logrus"`.
+* You can ignore warnings similar to `package github.com/justpark/auth/hydra/cmd/server: case-insensitive import collision: "github.com/sirupsen/logrus" and "github.com/sirupsen/logrus"`.
 
 ## Libraries and third-party projects
 
 Official:
-* [User Login & Consent Example](https://github.com/ory/hydra-login-consent-node)
+* [User Login & Consent Example](https://github.com/justpark/auth/hydra-login-consent-node)
 
 Community:
 * [Consent App SDK for Go](https://github.com/janekolszak/idp)
@@ -256,7 +256,7 @@ article: [Hydra: Run your own Identity and Access Management service in <5 Minut
 ## Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/ory/hydra/graphs/contributors"><img src="https://opencollective.com/ory/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/justpark/auth/hydra/graphs/contributors"><img src="https://opencollective.com/ory/contributors.svg?width=890&button=false" /></a>
 
 ## Backers
 

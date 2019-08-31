@@ -5,7 +5,7 @@ ARG git_commit
 
 RUN apk add --no-cache git build-base
 
-WORKDIR /go/src/github.com/ory/hydra
+WORKDIR /go/src/github.com/justpark/auth/hydra
 
 ENV GO111MODULE=on
 
