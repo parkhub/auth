@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "express-cli": "0.0.1",
-    "superagent": "3.7.0"
+    "superagent": "10.2.2"
   },
   "devDependencies": {
     "cypress": "^3.2.0",
